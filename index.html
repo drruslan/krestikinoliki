@@ -3,18 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .kvadrat{
+            border: solid 3px black;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction: row
+        }
+        .score{
+            font-size: 50px;
+        }
+    </style>
 </head>
-<body>
-<div>
-    <img src="пусой%20квадрат.png" width="250">
-    <img src="пусой%20квадрат.png" width="250">
-    <img src="пусой%20квадрат.png" width="250">
-    <img src="пусой%20квадрат.png" width="250">
-    <img src="пусой%20квадрат.png" width="250">
-    <img src="пусой%20квадрат.png" width="250">
-    <img src="пусой%20квадрат.png" width="250">
-    <img src="пусой%20квадрат.png" width="250">
-    <img src="пусой%20квадрат.png" width="250">
-</div>
+<body class="row">
+    <div>
+        <div>
+            <img id="1" onclick="changeimg1()" class="kvadrat" src="blank.png" width="150">
+            <img id="2" onclick="changeimg2()" class="kvadrat" src="blank.png" width="150">
+            <img id="3" onclick="changeimg3()" class="kvadrat" src="blank.png" width="150">
+        </div>
+        <div>
+            <img id="4" onclick="changeimg4()" class="kvadrat" src="blank.png" width="150">
+            <img id="5" onclick="changeimg5()" class="kvadrat" src="blank.png" width="150">
+            <img id="6" onclick="changeimg6()" class="kvadrat" src="blank.png" width="150">
+        </div>
+        <div>
+            <img id="7" onclick="changeimg7()" class="kvadrat" src="blank.png" width="150">
+            <img id="8" onclick="changeimg8()" class="kvadrat" src="blank.png" width="150">
+            <img id="9" onclick="changeimg9()" class="kvadrat" src="blank.png" width="150">
+        </div>
+    </div>
+    <img src="blank.png" width="50">
+    <div>
+        <div class="row">
+            <img src="крестик.png" width="50"> <img src="двоеточие.png" width="50"> <h1 class="score">0</h1>
+            <img src="blank.png" width="50">
+                <img src="нолик.png" width="50"> <img src="двоеточие.png" width="50"> <h1 class="score">0</h1>
+        </div>
+    <button onclick="reset()" style="width: 120px; height: 120px; background: white"><img
+           src="depositphotos_38685011-stock-illustration-start-over.jpg" height="100" width="100"/></button>
+
+    </div>
 </body>
+<script>
+    i=true
+function reset() {
+        document.getElementById('1').src="blank.png"
+        document.getElementById('2').src="blank.png"
+     document.getElementById('3').src="blank.png"
+     document.getElementById('4').src="blank.png"
+     document.getElementById('5').src="blank.png"
+     document.getElementById('6').src="blank.png"
+    document.getElementById('7').src="blank.png"
+     document.getElementById('8').src="blank.png"
+     document.getElementById('9').src="blank.png"
+
+}
+    function changeimg1() {
+        if(document.getElementById('1').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('1').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('1').src="крестик.png"
+
+            }
+        }
+
+    }
+
+
+    function changeimg2() {
+        if(document.getElementById('2').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('2').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('2').src="крестик.png"
+
+            }
+        }
+
+    }
+
+
+    function changeimg3() {
+        if(document.getElementById('3').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('3').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('3').src="крестик.png"
+
+            }
+        }
+
+    }
+
+
+    function changeimg4() {
+        if(document.getElementById('4').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('4').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('4').src="крестик.png"
+
+            }
+        }
+
+    }
+
+    function changeimg5() {
+        if(document.getElementById('5').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('5').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('5').src="крестик.png"
+
+            }
+        }
+
+    }
+
+    function changeimg6() {
+        if(document.getElementById('6').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('6').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('6').src="крестик.png"
+
+            }
+        }
+
+    }
+
+    function changeimg7() {
+        if(document.getElementById('7').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('7').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('7').src="крестик.png"
+
+            }
+        }
+
+    }
+
+    function changeimg8() {
+        if(document.getElementById('8').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('8').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('8').src="крестик.png"
+
+            }
+        }
+
+    }
+
+    function changeimg9() {
+        if(document.getElementById('9').src.includes('blank.png')){
+            i=!i
+            if(i===true){
+                document.getElementById('9').src="нолик.png"
+            }
+            if(i===false){
+                document.getElementById('9').src="крестик.png"
+
+            }
+        }
+
+    }
+</script>
 </html>
