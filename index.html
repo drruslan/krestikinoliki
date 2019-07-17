@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .kvadrat{
             border: solid 3px black;
@@ -39,9 +40,9 @@
     <img src="blank.png" width="50">
     <div>
         <div class="row">
-            <img src="крестик.png" width="50"> <img src="двоеточие.png" width="50"> <h1 class="score">0</h1>
+            <img src="крестик.png" width="50"> <img src="двоеточие.png" width="50"> <h1 class="score" id="scorekrestik">0</h1>
             <img src="blank.png" width="50">
-                <img src="нолик.png" width="50"> <img src="двоеточие.png" width="50"> <h1 class="score">0</h1>
+                <img src="нолик.png" width="50"> <img src="двоеточие.png" width="50"> <h1 class="score" id="scorenolik">0</h1>
         </div>
     <button onclick="reset()" style="width: 120px; height: 120px; background: white"><img
            src="depositphotos_38685011-stock-illustration-start-over.jpg" height="100" width="100"/></button>
@@ -60,6 +61,7 @@ function reset() {
     document.getElementById('7').src="blank.png"
      document.getElementById('8').src="blank.png"
      document.getElementById('9').src="blank.png"
+    i=true
 
 }
     function changeimg1() {
@@ -190,5 +192,31 @@ function reset() {
         }
 
     }
+    scorenolik = 0
+    scorekrestik = 0
+    function win(img1, img2, img3) {
+        if (document.getElementById(img1).src===document.getElementById(img2).src&&document.getElementById(img3).src===document.getElementById(img2).src){
+            if (document.getElementById(img1).src.includes("%D0%BD%D0%BE%D0%BB%D0%B8%D0%BA.png")){
+                scorenolik=scorenolik+1
+                reset()
+document.getElementById('scorenolik').innerHTML=scorenolik
+            }
+            if (document.getElementById(img2).src.includes("%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA.png")){
+                scorekrestik=scorekrestik+1
+                reset()
+                document.getElementById('scorekrestik').innerHTML=scorekrestik
+            }
+        }
+    }
+    setInterval(function () {
+        win('1','2','3')
+        win('4','5','6')
+        win('7','8','9')
+        win('1','5','9')
+        win('3','5','7')
+        win('1','4','7')
+        win('2','5','8')
+        win('3','6','9')
+    },100)
 </script>
 </html>
